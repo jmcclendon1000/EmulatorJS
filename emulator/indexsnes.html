@@ -156,7 +156,7 @@ let serverIP = `${location.hostname}${location.port ? ':' + location.port : ''}`
       };
 
       // use favicon (small) â€” add timestamp to avoid caching
-      img.src = `http://${host}/favicon.ico?ts=${Date.now()}`;
+      img.src = `https://${host}/favicon.ico?ts=${Date.now()}`;
     });
   }
 
@@ -235,8 +235,8 @@ let serverIP = `${location.hostname}${location.port ? ':' + location.port : ''}`
   // Configure EmulatorJS
   window.EJS_player      = "#game";
   window.EJS_gameName    = romParam;
-//window.EJS_biosUrl = `http://${serverIP}/emulator/SCPH1001.BIN`;
-  window.EJS_gameUrl     = `http://${serverIP}/emulator/roms/${romParam}?t=${Date.now()}`;
+//window.EJS_biosUrl = `https://${serverIP}/emulator/SCPH1001.BIN`;
+  window.EJS_gameUrl     = `https://${serverIP}/emulator/roms/${romParam}?t=${Date.now()}`;
  window.EJS_core        = "snes";
   window.EJS_pathtodata  = "data/";
   window.EJS_startOnLoaded = true;
